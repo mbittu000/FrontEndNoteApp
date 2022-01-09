@@ -120,3 +120,23 @@ margin-top: -5px;
   border-radius: 100px;
   height: 40px;
 }
+.view{
+  padding: 10px;
+}
+.view div p{
+  font-size: 25px;
+}
+.view hr{
+  border: 2px solid pink;
+  border-radius: 20px;
+}
+.view h3{
+  font-size: 20px;
+  text-align: center;
+}
+.dl{
+  width: 35px;
+  position: fixed;
+  bottom: 10px;
+  right: 180px;
+}
