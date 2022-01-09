@@ -5,7 +5,7 @@ let Note=(props)=>{
 let fl=false
   return(
     <>
-   <Link to='/view'> <div className='notediv' 
+   <Link to='/view' className='link'> <div className='notediv' 
     onClick={()=>{
     localStorage.setItem('view',props.id)
       

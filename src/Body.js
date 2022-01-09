@@ -26,7 +26,7 @@ console.log(data)
  }
  <div className='pendiv'>
 
-<Link to='/edit'> <img src={pencil} alt='pencil' className='pencil'/></Link>
+<Link to='/edit' className='link'> <img src={pencil} alt='pencil' className='pencil'/></Link>
  </div>
     </div>
     </>
