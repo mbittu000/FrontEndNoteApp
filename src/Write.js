@@ -1,11 +1,12 @@
 import {useState,useEffect} from'react'
+import { useNavigate } from "react-router-dom";
 let Edit=()=>{
   let [title,setTitle]=useState('')
   let [note,setNote]=useState('')
   let [obj,setObj]=useState()
   let rew=localStorage.getItem('view');
   let uri=`https://business-note.herokuapp.com/edit/note/${rew}`
-  
+  let his=useNavigate()
     useEffect(()=>{
    async function call() {
     let re=localStorage.getItem('view');
@@ -33,6 +34,7 @@ fetch(uri,{
 .then(function(res){ return res.json(); })
 .then(function(data){ console.log(data)})
 console.log(title,note)
+his('/view')
   }
   
   return(
@@ -40,13 +42,15 @@ console.log(title,note)
     <center>
 
 
-<textarea id='txtNote' className='txtnote' name="note" rows="3" cols="50" placeholder='Note' value={title}  id='def' onChange={(e)=>{setTitle(e.target.value)}} 
+<textarea id='txtNote' className='txtnote' name="note" rows="3" cols="48" placeholder='Note' value={title}  id='def' onChange={(e)=>{setTitle(e.target.value)}} 
 ></textarea>
-<textarea id='txtNote' className='txtnote' name="note" rows="40" id='ndof' cols="50" placeholder='Note' value={note}  onChange={(e)=>{setNote(e.target.value)}}
+<textarea id='txtNote' className='txtnote' name="note" rows="40" id='ndof' cols="48" placeholder='Note' value={note}  onChange={(e)=>{setNote(e.target.value)}}
 >
 </textarea>
 <button className='sub' onClick={sub}>Submit</button>
 </center>
+
+
     </>
     )
 }

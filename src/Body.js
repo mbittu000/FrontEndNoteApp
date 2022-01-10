@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import {useState,useEffect} from'react'
 let Body=()=>{
 let [data,setData]=useState([])
+
+//console.log(gett)
+//location.reload()
 let uri=`https://business-note.herokuapp.com/get/note`
 useEffect(()=>{
   async function call(){
@@ -12,8 +15,10 @@ useEffect(()=>{
     setData(fet)
   }
   call()
-},[uri])
+},[])
+//window.history=1
 
+  
 console.log(data)
   return(
     <>
@@ -29,6 +34,7 @@ console.log(data)
 <Link to='/edit' className='link'> <img src={pencil} alt='pencil' className='pencil'/></Link>
  </div>
     </div>
+
     </>
     )
 }
