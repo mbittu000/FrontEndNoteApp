@@ -31,12 +31,16 @@ let View=()=>{
     <>
 <div className='view'>
 
-<h3>{data.title}</h3>
+<textarea id='txtNote' className='txtnote' name="note" rows="3" cols="50"
+readOnly={true} value={data.title}
+></textarea>
 <br/>
 <hr/>
-<div>  
 <br/>
-<p>{data.note}</p>
+<div>  
+<textarea id='txtNote' className='txtnote' name="note" rows="48" cols="50" 
+readOnly={true} value={data.note}
+></textarea>
 </div>
 
  <div className='pendiv'>

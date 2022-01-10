@@ -120,8 +120,9 @@ margin-top: -5px;
   border-radius: 100px;
   height: 40px;
 }
-.view{
+.view textarea{
   padding: 10px;
+  background: #f6e5fc;
 }
 .view div p{
   font-size: 25px;
