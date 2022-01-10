@@ -5,7 +5,7 @@ let Home=()=>{
   return(
     <>
   <Head/>
-  <Body his={gett}/>
+  <Body/>
     
     
     </>
